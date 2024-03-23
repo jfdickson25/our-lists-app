@@ -1,0 +1,53 @@
+#main-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    padding-top: 15vh;
+}
+
+.link-list {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.link-list-item {
+    color: white;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(17, 1fr);
+    font-size: 14pt;
+    background-color: #e3dcc7;
+    grid-column: 3/16;
+    width: 100%;
+    height: 8vh;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    font-family: 'Alexandria', sans-serif;
+}
+
+.link-list-item img {
+    grid-column: 6/8;
+    width: 70%;
+}
+
+.link-list-item p {
+    grid-column: 8/15;
+    font-weight: 400;
+    margin: 0;
+    color: #93a590;
+}
+
+@media only screen and (min-width: 1200px) {
+    #main-icon {
+        width: 10%;
+    }
+
+    .link-list-item {
+        grid-column: 8/11;
+    }
+}

@@ -1,0 +1,76 @@
+#story {
+    grid-column: 4/15;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-section {
+    grid-column: 3/16;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 30px;
+    margin-top: 50px;
+}
+
+.user-input {
+    box-sizing: border-box;
+    grid-column: 1/8;
+    width: 100%;
+    height: 7vh;
+    margin: 0;
+    padding: 0;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: solid 1px white;
+    background-color: transparent;
+    font-size: 14pt;
+    font-family: 'Alexandria', sans-serif;
+    padding: 20px;
+}
+
+.user-input::placeholder {
+    font-weight: 100;
+    color: rgba(238, 238, 238, 0.808);
+}
+
+button {
+    grid-column: 1/8;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 7vh;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+    background-color: #e3dcc7;
+    color: white;
+    font-weight: 400;
+    font-size: 14pt;
+    font-family: 'Alexandria', sans-serif;
+    color: #93a590;
+}
+
+#error-msg {
+    color: rgb(67, 67, 67);
+    text-align: center;
+    font-size: 12pt;
+    grid-column: 1/8;
+    margin: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+    #story {
+        grid-column: 8/11;
+    }
+
+    .user-input {
+        grid-column: 3/6;
+    }
+
+    button {
+        grid-column: 3/6;
+    }
+}
