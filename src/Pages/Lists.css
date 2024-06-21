@@ -73,14 +73,3 @@
     width: 100%;
 
 }
-
-@media only screen and (min-width: 1200px) {
-    .list {
-        font-size: 18pt;
-        grid-column: 7/12;
-    }
-
-    .list a.list-view {
-        grid-column: 13;
-    }
-}

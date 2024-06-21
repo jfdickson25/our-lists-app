@@ -4,6 +4,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #93a590;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+#application {
+  max-width: 600px;
 }
 
 code {
@@ -27,6 +35,11 @@ a {
   align-items: center;
 }
 
+#back {
+  grid-column: 2/4;
+  width: 100%;
+}
+
 #header {
   grid-column: 1/18;
   width: 100%;
@@ -42,11 +55,6 @@ a {
   font-size: 16pt;
   margin: 0;
   color: white;
-}
-
-#back {
-  grid-column: 2/4;
-  width: 100%;
 }
 
 .content-loading {
