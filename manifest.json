@@ -28,7 +28,7 @@
       "purpose": "maskable"
     }
   ],
-  "start_url": "/our-lists-app",
+  "start_url": "/our-lists-app/",
   "display": "standalone",
   "theme_color": "#93a590",
   "background_color": "#93a590",
