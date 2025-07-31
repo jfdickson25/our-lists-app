@@ -212,7 +212,7 @@
 }
 
 #crossed-off-title {
-    grid-column: 2/17;
+    grid-column: 4/15;
     width: 100%;
     text-align: center;
     font-size: 14pt;
@@ -222,6 +222,27 @@
     justify-self: center;
     padding-bottom: 5px;
     color: white;
+}
+
+#bomb-container {
+    width: 100%;
+    grid-column: 15/17;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 80px;
+}
+
+#bomb-img {
+    width: 100%;
+    grid-column: 15/17;
+    padding-bottom: 20px;
+}
+
+#explosion {
+    width: 0%;
+    animation: explode 1s ease-in-out;
+    padding-bottom: 20px;
 }
 
 .crossed-off-item {
@@ -259,5 +280,19 @@
     grid-column: 1/18;
     height: 50px;
     width: 100%;
+}
+
+@keyframes explode {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
 }
 

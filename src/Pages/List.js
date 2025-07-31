@@ -14,6 +14,7 @@ const List = () => {
     const [newCategory, setNewCategory] = useState('');
     const [refreshingPage, setRefreshingPage] = useState(false);
     const [refreshCount, setRefreshCount] = useState(0);
+    const [exploding, setExploding] = useState(false);
 
     useEffect(() => {
         // Make a get request to https://our-lists.glitch.me/list/:id with the id of the list
@@ -341,6 +342,34 @@ const List = () => {
                 })
             }
             <div id="crossed-off-title">Crossed Off</div>
+            <div id="bomb-container">
+            {
+                (exploding) ? (
+                    <img id='explosion' src='https://cdn.glitch.global/a505ce02-f570-40df-ad76-697af5e6acd7/explosion%20bang.png?v=1727633978134' />
+                ) : (
+                    <img id="bomb-img" src='https://cdn.glitch.global/a505ce02-f570-40df-ad76-697af5e6acd7/bomb-blast.png?v=1727631700707' onClick={() => {
+                        // Check if there are any crossed off items
+                        if(crossedOff.length === 0) return;
+
+                        setExploding(true);
+
+                        setTimeout(() => {
+                            setExploding(false);
+                            setCrossedOff([]);
+                        }, 800);
+
+                        // Make a post request to https://our-lists.glitch.me/list/clearCrossedOff with the id of the list
+                        fetch('https://our-lists.glitch.me/list/clearCrossedOff', {
+                            method: 'POST',
+                            body: JSON.stringify({code: id}),
+                            headers: {
+                            'Content-Type': 'application/json'
+                            }
+                        });
+                    }}/>
+                )
+            }
+            </div>
             {
                 (crossedOff) && crossedOff.map((item, index) => {
                     return (
