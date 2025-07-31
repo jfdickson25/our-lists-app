@@ -17,7 +17,7 @@ const Lists = () => {
 
 
     useEffect(() => {
-        // Grab lists from localstorage and make a request to https://our-lists.glitch.me/myLists/:id for each list
+        // Grab lists from localstorage and make a request to https://our-lists-4ff1ad33d970.herokuapp.com/myLists/:id for each list
         // Then setLists to the response
 
         let listIDs = JSON.parse(localStorage.getItem('lists'));
@@ -30,7 +30,7 @@ const Lists = () => {
             }
 
             for (const listID of listIDs) {
-                const response = await fetch(`https://our-lists.glitch.me/myLists/${listID}`);
+                const response = await fetch(`https://our-lists-4ff1ad33d970.herokuapp.com/myLists/${listID}`);
                 const data = await response.json();
 
                 console.log(data);
@@ -96,7 +96,7 @@ const Lists = () => {
                                                 setLists(newList);
                                                 localStorage.setItem('lists', JSON.stringify(newList.map(l => l.code)));
 
-                                                fetch(`https://our-lists.glitch.me/list`, 
+                                                fetch(`https://our-lists-4ff1ad33d970.herokuapp.com/list`, 
                                                 {
                                                     method: 'DELETE',
                                                     body: JSON.stringify({code: list.code}),

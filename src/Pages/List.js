@@ -17,9 +17,9 @@ const List = () => {
     const [exploding, setExploding] = useState(false);
 
     useEffect(() => {
-        // Make a get request to https://our-lists.glitch.me/list/:id with the id of the list
+        // Make a get request to https://our-lists-4ff1ad33d970.herokuapp.com/list/:id with the id of the list
         // Then set the list state to the data returned from the request
-        fetch(`https://our-lists.glitch.me/list/${id}`)
+        fetch(`https://our-lists-4ff1ad33d970.herokuapp.com/list/${id}`)
         .then(res => res.json())
         .then(data => {
             setListName(data.list.name);
@@ -59,7 +59,7 @@ const List = () => {
         newCategories[index].movingDown = false;
         setCategories(newCategories);
 
-        fetch('https://our-lists.glitch.me/list/moveUp', {
+        fetch('https://our-lists-4ff1ad33d970.herokuapp.com/list/moveUp', {
             method: 'POST',
             body: JSON.stringify({code: id, index}),
             headers: {
@@ -77,7 +77,7 @@ const List = () => {
         newCategories[index].movingUp = false;
         setCategories(newCategories);
 
-        fetch('https://our-lists.glitch.me/list/moveDown', {
+        fetch('https://our-lists-4ff1ad33d970.herokuapp.com/list/moveDown', {
             method: 'POST',
             body: JSON.stringify({code: id, index}),
             headers: {
@@ -90,7 +90,7 @@ const List = () => {
         const newCategories = categories.filter(category => category.name !== categoryName);
         setCategories(newCategories);
 
-        fetch('https://our-lists.glitch.me/list/category', {
+        fetch('https://our-lists-4ff1ad33d970.herokuapp.com/list/category', {
             method: 'DELETE',
             body: JSON.stringify({code: id, categoryName}),
             headers: {
@@ -100,7 +100,7 @@ const List = () => {
     }
 
     const changeQnt = (categoryIndex, itemIndex, quantity) => {
-        fetch('https://our-lists.glitch.me/list/changeQnt', {
+        fetch('https://our-lists-4ff1ad33d970.herokuapp.com/list/changeQnt', {
             method: 'POST',
             body: JSON.stringify({
                 code: id, 
@@ -184,8 +184,8 @@ const List = () => {
                                             }} 
                                             value={category.name} 
                                             onBlur={() => {
-                                                // Make a post request to https://our-lists.glitch.me/list/changeCategory with the id of the list, the category name, and the new category name
-                                                fetch('https://our-lists.glitch.me/list/changeCategoryName', {
+                                                // Make a post request to https://our-lists-4ff1ad33d970.herokuapp.com/list/changeCategory with the id of the list, the category name, and the new category name
+                                                fetch('https://our-lists-4ff1ad33d970.herokuapp.com/list/changeCategoryName', {
                                                     method: 'POST',
                                                     body: JSON.stringify({
                                                         code: id,
@@ -227,8 +227,8 @@ const List = () => {
                                         // If the input is empty, don't add the item
                                         if(category.newItem === '') return;
 
-                                        // Make a post request to https://our-lists.glitch.me/list/addItem with the id of the list, the category name, and the item name
-                                        fetch('https://our-lists.glitch.me/list/addItem', {
+                                        // Make a post request to https://our-lists-4ff1ad33d970.herokuapp.com/list/addItem with the id of the list, the category name, and the item name
+                                        fetch('https://our-lists-4ff1ad33d970.herokuapp.com/list/addItem', {
                                             method: 'POST',
                                             body: JSON.stringify({code: id, category: category.name, item: category.newItem, qnt: 1}),
                                             headers: {
@@ -257,8 +257,8 @@ const List = () => {
                                                             newCategories[categoryIndex].items[itemIndex].name = event.target.value;
                                                             setCategories(newCategories);
                                                         }} value={item.name} onBlur={() => {
-                                                            // Make a post request to https://our-lists.glitch.me/list/changeItem with the id of the list, the category name, the item name, and the new item name
-                                                            fetch('https://our-lists.glitch.me/list/changeItemName', {
+                                                            // Make a post request to https://our-lists-4ff1ad33d970.herokuapp.com/list/changeItem with the id of the list, the category name, the item name, and the new item name
+                                                            fetch('https://our-lists-4ff1ad33d970.herokuapp.com/list/changeItemName', {
                                                                 method: 'POST',
                                                                 body: JSON.stringify({
                                                                     code: id,
@@ -316,7 +316,7 @@ const List = () => {
                                                     setCategories(newCategories);
                                                     setCrossedOff(newCrossedOff);
 
-                                                    fetch('https://our-lists.glitch.me/list/crossOff', {
+                                                    fetch('https://our-lists-4ff1ad33d970.herokuapp.com/list/crossOff', {
                                                         method: 'POST',
                                                         body: JSON.stringify({
                                                             code: id, 
@@ -358,8 +358,8 @@ const List = () => {
                             setCrossedOff([]);
                         }, 800);
 
-                        // Make a post request to https://our-lists.glitch.me/list/clearCrossedOff with the id of the list
-                        fetch('https://our-lists.glitch.me/list/clearCrossedOff', {
+                        // Make a post request to https://our-lists-4ff1ad33d970.herokuapp.com/list/clearCrossedOff with the id of the list
+                        fetch('https://our-lists-4ff1ad33d970.herokuapp.com/list/clearCrossedOff', {
                             method: 'POST',
                             body: JSON.stringify({code: id}),
                             headers: {
@@ -387,7 +387,7 @@ const List = () => {
                                 setCategories(newCategories);
                                 setCrossedOff(newCrossedOff);
 
-                                fetch('https://our-lists.glitch.me/list/uncrossOff', {
+                                fetch('https://our-lists-4ff1ad33d970.herokuapp.com/list/uncrossOff', {
                                     method: 'POST',
                                     body: JSON.stringify({
                                         code: id,
@@ -408,7 +408,7 @@ const List = () => {
                                     newCrossedOff.splice(index, 1);
                                     setCrossedOff(newCrossedOff);
 
-                                    fetch('https://our-lists.glitch.me/list/item', {
+                                    fetch('https://our-lists-4ff1ad33d970.herokuapp.com/list/item', {
                                         method: 'DELETE',
                                         body: JSON.stringify({
                                             code: id,
@@ -448,8 +448,8 @@ const List = () => {
                                 // Add category to the front of the categories array
                                 setCategories([category, ...categories]);
 
-                                // Make a post request to https://our-lists.glitch.me/list/addCategory with the id of the list and the new category
-                                fetch('https://our-lists.glitch.me/list/addCategory', {
+                                // Make a post request to https://our-lists-4ff1ad33d970.herokuapp.com/list/addCategory with the id of the list and the new category
+                                fetch('https://our-lists-4ff1ad33d970.herokuapp.com/list/addCategory', {
                                     method: 'POST',
                                     body: JSON.stringify({code: id, categoryName: newCategory}),
                                     headers: {

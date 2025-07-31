@@ -21,10 +21,10 @@ const Create = (props) => {
     }
 
     const createList = (name) => {
-        // Make a post request to https://our-lists.glitch.me/createList with the name of the list
+        // Make a post request to https://our-lists-4ff1ad33d970.herokuapp.com/createList with the name of the list
         // Then add the id returned from the request to localStorage
         // Then navigate to the list page
-        fetch('https://our-lists.glitch.me/createList', {
+        fetch('https://our-lists-4ff1ad33d970.herokuapp.com/createList', {
             method: 'POST',
             body: JSON.stringify({name}),
             headers: {
@@ -48,10 +48,10 @@ const Create = (props) => {
     }
 
     const joinList = (code) => {
-        // Make a get request to https://our-lists.glitch.me/joinList/:id with the code of the list
+        // Make a get request to https://our-lists-4ff1ad33d970.herokuapp.com/joinList/:id with the code of the list
         // Then add the id returned from the request to localStorage
         // Then navigate to the list page
-        fetch(`https://our-lists.glitch.me/joinList/${code}`)
+        fetch(`https://our-lists-4ff1ad33d970.herokuapp.com/joinList/${code}`)
         .then(res => res.json())
         .then(data => {
             if(data.found === false) {
