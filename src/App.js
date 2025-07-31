@@ -20,12 +20,12 @@ function App() {
     <Router>
       <Suspense fallback={<Loading className='page-loading' size={100} />}>
         <Routes>
-          <Route path="/createList" element={<CreateJoin storyImg={createImg} pageType='string' />} exact />
-          <Route path="/joinList" element={<CreateJoin storyImg={joinImg} pageType='number' />} exact />
-          <Route path="/myLists" element={<Lists />} exact />
-          <Route path="/list/:id" element={<List />} exact />
-          <Route path="/" element={<Home />} exact />
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="/our-lists-app/createList" element={<CreateJoin storyImg={createImg} pageType='string' />} exact />
+          <Route path="/our-lists-app/joinList" element={<CreateJoin storyImg={joinImg} pageType='number' />} exact />
+          <Route path="/our-lists-app/myLists" element={<Lists />} exact />
+          <Route path="/our-lists-app/list/:id" element={<List />} exact />
+          <Route path="/our-lists-app" element={<Home />} exact />
+          <Route path="*" element={<Navigate to="/our-lists-app" />} />
         </Routes>
       </Suspense>
     </Router>

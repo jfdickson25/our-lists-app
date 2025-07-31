@@ -16,7 +16,7 @@ const Create = (props) => {
         setNavingBack(true);
         setTimeout(() => {
             setNavingBack(false);
-            navigate('/');
+            navigate('/our-lists-app');
         }, 1000);
     }
 
@@ -38,10 +38,10 @@ const Create = (props) => {
             // If there isn't, create a new array with the list id
             if(!localStorage.getItem('lists')) {
                 localStorage.setItem('lists', JSON.stringify([data.code]));
-                navigate(`/list/${data.code}`);
+                navigate(`/our-lists-app/list/${data.code}`);
             } else {
                 localStorage.setItem('lists', JSON.stringify([...JSON.parse(localStorage.getItem('lists')), data.code]));
-                navigate(`/list/${data.code}`);
+                navigate(`/our-lists-app/list/${data.code}`);
             }
         })
         .catch(err => console.log(err));
@@ -62,13 +62,13 @@ const Create = (props) => {
                 // If there isn't, create a new array with the list id
                 if(!localStorage.getItem('lists')) {
                     localStorage.setItem('lists', JSON.stringify([parseInt(code)]));
-                    navigate(`/list/${code}`);
+                    navigate(`/our-lists-app/list/${code}`);
                 } else {
                     if(JSON.parse(localStorage.getItem('lists')).includes(parseInt(code))) {
-                        navigate(`/list/${code}`);
+                        navigate(`/our-lists-app/list/${code}`);
                     }
                     localStorage.setItem('lists', JSON.stringify([...JSON.parse(localStorage.getItem('lists')), parseInt(code)]));
-                    navigate(`/list/${code}`);
+                    navigate(`/our-lists-app/list/${code}`);
                 }
             }
         });

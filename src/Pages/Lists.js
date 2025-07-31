@@ -54,12 +54,12 @@ const Lists = () => {
         setNavingBack(true);
         setTimeout(() => {
             setNavingBack(false);
-            navigate('/');
+            navigate('/our-lists-app/');
         }, 1000);
     }
 
     const navList = (listID) => {
-        navigate(`/list/${listID}`);
+        navigate(`/our-lists-app/list/${listID}`);
     }
 
     return (

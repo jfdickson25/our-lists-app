@@ -46,7 +46,7 @@ const List = () => {
         setNavingBack(true);
         setTimeout(() => {
             setNavingBack(false);
-            navigate('/myLists');
+            navigate('/our-lists-app/myLists');
         }, 1000);
     }
 
