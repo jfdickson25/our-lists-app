@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/our-lists-app/static/css/main.749f1822.css",
+    "main.js": "/our-lists-app/static/js/main.7ff89895.js",
+    "static/css/590.a5879c80.chunk.css": "/our-lists-app/static/css/590.a5879c80.chunk.css",
+    "static/js/590.c34f9577.chunk.js": "/our-lists-app/static/js/590.c34f9577.chunk.js",
+    "static/css/667.ee0dac70.chunk.css": "/our-lists-app/static/css/667.ee0dac70.chunk.css",
+    "static/js/667.eb241862.chunk.js": "/our-lists-app/static/js/667.eb241862.chunk.js",
+    "static/css/91.494b6875.chunk.css": "/our-lists-app/static/css/91.494b6875.chunk.css",
+    "static/js/91.901e9487.chunk.js": "/our-lists-app/static/js/91.901e9487.chunk.js",
+    "static/css/151.5c945f85.chunk.css": "/our-lists-app/static/css/151.5c945f85.chunk.css",
+    "static/js/151.6a2e2eb0.chunk.js": "/our-lists-app/static/js/151.6a2e2eb0.chunk.js",
+    "static/js/458.ccbabbdc.chunk.js": "/our-lists-app/static/js/458.ccbabbdc.chunk.js",
+    "static/js/787.5faf06e4.chunk.js": "/our-lists-app/static/js/787.5faf06e4.chunk.js",
+    "static/css/361.31d6cfe0.chunk.css": "/our-lists-app/static/css/361.31d6cfe0.chunk.css",
+    "service-worker.js": "/our-lists-app/service-worker.js",
+    "index.html": "/our-lists-app/index.html",
+    "main.749f1822.css.map": "/our-lists-app/static/css/main.749f1822.css.map",
+    "main.7ff89895.js.map": "/our-lists-app/static/js/main.7ff89895.js.map",
+    "590.a5879c80.chunk.css.map": "/our-lists-app/static/css/590.a5879c80.chunk.css.map",
+    "590.c34f9577.chunk.js.map": "/our-lists-app/static/js/590.c34f9577.chunk.js.map",
+    "667.ee0dac70.chunk.css.map": "/our-lists-app/static/css/667.ee0dac70.chunk.css.map",
+    "667.eb241862.chunk.js.map": "/our-lists-app/static/js/667.eb241862.chunk.js.map",
+    "91.494b6875.chunk.css.map": "/our-lists-app/static/css/91.494b6875.chunk.css.map",
+    "91.901e9487.chunk.js.map": "/our-lists-app/static/js/91.901e9487.chunk.js.map",
+    "151.5c945f85.chunk.css.map": "/our-lists-app/static/css/151.5c945f85.chunk.css.map",
+    "151.6a2e2eb0.chunk.js.map": "/our-lists-app/static/js/151.6a2e2eb0.chunk.js.map",
+    "458.ccbabbdc.chunk.js.map": "/our-lists-app/static/js/458.ccbabbdc.chunk.js.map",
+    "787.5faf06e4.chunk.js.map": "/our-lists-app/static/js/787.5faf06e4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.749f1822.css",
+    "static/js/main.7ff89895.js"
+  ]
+}
